@@ -1,0 +1,11 @@
+pgterm is an interactive terminal UI that monitors every PostgreSQL
+database you care about in one place. Each tab is one database; pgterm
+checks them in the background and flags the tab that needs attention.
+
+It drives pgbot (https://pgbot.dev) as a read-only diagnostic engine.
+Install pgbot separately and keep it on PATH, or set PGBOT_BIN.
+
+Configuration lives in ~/.config/pgterm/config.toml and stores
+environment-variable names, never connection strings.
+
+Native OpenBSD source build of https://github.com/pgrundev/pgterm.

@@ -180,6 +180,16 @@ cargo test
 
 pgterm finds pgbot on `PATH`, or wherever `PGBOT_BIN` points.
 
+On OpenBSD there is no GitHub release binary (`install.sh` is linux/macOS
+only). Source builds as-is — no extra patches. For a `pkg_add` package:
+
+```sh
+./scripts/openbsd-mkpackage.sh       # → ~/.pgterm-ports/packages/.../pgterm-*.tgz
+./scripts/openbsd-mkpackage.sh -i    # build and install
+```
+
+See [openbsd-port/README.md](openbsd-port/README.md).
+
 ## License
 
 Apache-2.0

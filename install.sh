@@ -22,6 +22,9 @@ have() { command -v "$1" >/dev/null 2>&1; }
 os=$(uname -s | tr '[:upper:]' '[:lower:]')
 case "$os" in
   linux|darwin) ;;
+  openbsd)
+    die "no prebuilt OpenBSD binary — build from source: cargo build --release (or ./scripts/openbsd-mkpackage.sh for a ports package)"
+    ;;
   *) die "unsupported OS: $os (linux and macOS only — build from source: cargo install --git https://github.com/$REPO)" ;;
 esac
 
